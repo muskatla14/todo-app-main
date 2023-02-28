@@ -27,59 +27,68 @@
   </head>
   <body>
     <main class="main">
-      <section class="img-bg">
+      <section class="main__img-bg">
         <div class="form-container">
-          <h1>Todo</h1>
-          <img src="/images/icon-sun.svg" alt="" />
-          <form>
-            <input class="input" type="text" placeholder="Create a new todo" />
+          <h1 class="heading">Todo</h1>
+          <div class="icon-div">
+            <img class="mode-icon" src="/images/icon-sun.svg" alt="" />
+          </div>
+          <form class="form">
+            <input
+              class="form__input"
+              type="text"
+              placeholder="Create a new todo..."
+              onfocus="this.placeholder = ''"
+              onblur="this.placeholder = 'Create a new todo...'"
+            />
           </form>
         </div>
       </section>
       <section class="one-color-bg">
-        <div class="one-color-bg__list">
+        <div class="one-color-bg__list" style="display: none">
           <ul class="todo-items">
-            <li class="todo-items__item">
-              <img src="/images/icon-check.svg" alt="" />
+            <!-- <li class="todo-items__item">
+              <div class="field-group">
+                <input type="checkbox" name="checkbox" class="checkbox-field" />
+                <label for="reading" class="checkbox-label"></label>
+              </div>
               <p>Walk dog</p>
-              <img src="/images/icon-cross.svg" alt="" />
+              <span class="close-btn"
+                ><img src="/images/icon-cross.svg" alt=""
+              /></span>
             </li>
             <li class="todo-items__item">
-              <img src="/images/icon-check.svg" alt="" />
+              <div class="field-group">
+                <input type="checkbox" name="checkbox" class="checkbox-field" />
+                <label for="reading" class="checkbox-label"></label>
+              </div>
               <p>Walk dog</p>
-              <img src="/images/icon-cross.svg" alt="" />
-            </li>
-            <li class="todo-items__item">
-              <img src="/images/icon-check.svg" alt="" />
-              <p>Walk dog</p>
-              <img src="/images/icon-cross.svg" alt="" />
-            </li>
-            <li class="todo-items__item">
-              <img src="/images/icon-check.svg" alt="" />
-              <p>Walk dog</p>
-              <img src="/images/icon-cross.svg" alt="" />
-            </li>
+              <span class="close-btn"
+                ><img src="/images/icon-cross.svg" alt=""
+              /></span>
+            </li> -->
           </ul>
           <div class="list-footer">
             <div class="left">
-              <p class="left__items">Items Left</p>
+              <p class="left__items">
+                <span class="num-of-items-left">0</span> Items Left
+              </p>
             </div>
             <div class="select">
-              <p class="select__all">All</p>
-              <p class="select__active">Active</p>
-              <p class="select__completed">Completed</p>
+              <p class="select-items select__all active">All</p>
+              <p class="select-items select__active">Active</p>
+              <p class="select-items select__completed">Completed</p>
             </div>
             <div class="clear">
               <p class="clear__completed">Clear Completed</p>
             </div>
           </div>
         </div>
-        <div class="one-color-bg__footer">
+        <!-- <div class="drag-and-drop-msg">
           <p>Drag and drop to reorder list</p>
-        </div>
+        </div> -->
       </section>
     </main>
-
     <!-- Add dynamic number -->
     <div class="attribution">
       Challenge by
@@ -87,5 +96,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>

@@ -10,6 +10,152 @@ body {
     font-family: $font-stack;
     background-color: black;
     color: beige;
+    font-size: 18px;
 }
 
- 
+li {
+    list-style-type: none;
+}
+
+
+.main {
+    display: grid;
+    grid-template-rows: 250px auto 100vh;
+
+    &__img-bg {
+        background-image: url(../images/bg-desktop-dark.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-container {
+        width: 40vw;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 20px;
+
+        .heading {
+            flex: 1 0 50%;
+            text-transform: uppercase;
+            letter-spacing: 20px;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .icon-div {
+            align-self: center;
+            cursor: pointer;
+        }
+
+        .form {
+            flex: 0 1 100%;
+
+            &__input {
+                width: 100%;
+                padding: 20px;
+                background: $very-dark-desaturated-blue;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                color: #fff;
+                font-size: 18px;
+                // text-transform: capitalize;
+
+                &::placeholder {
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .one-color-bg {
+        position: relative;
+        background: $very-dark-blue;
+        grid-row: 2 / 5;
+
+        &__list {
+            background: $very-dark-desaturated-blue;
+            width: 40vw;
+            position: absolute;
+            left: 50%;
+            top: -50px;
+            transform: translate(-50%, 0);
+            border-radius: 5px;
+        }   
+
+        .todo-items {
+
+            &__item {
+                display: flex;
+                padding: 1rem;
+                border-bottom: 1px solid $dark-grayish-blue;
+                gap: 1rem;
+
+
+                p {
+                    flex: 2;
+                    color: $light-grayish-blue;
+
+                    &.complete {
+                        text-decoration: line-through;
+                        color: $dark-grayish-blue;
+                    }
+                }
+
+
+                .close-btn {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .list-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            font-size: 12px;
+            font-weight: 700;
+            color: $dark-grayish-blue;
+        }
+
+        .select {
+            display: flex;
+            gap: 1rem;
+
+            .select-items {
+                cursor: pointer;
+            }
+
+            .select-items::focus {
+                color: red;
+            };
+
+            .select-items.active {
+                color: $bright-blue;
+            }
+        }
+
+        .clear {
+            cursor: pointer;
+        }
+    }
+
+    .drag-and-drop-msg {
+       position: absolute;
+       bottom: 60%;
+       left: 50%;
+       transform: translateX(-50%);
+       font-size: 12px;
+       color: $dark-grayish-blue;
+       font-weight: 700;
+    }
+
+}
+
+
