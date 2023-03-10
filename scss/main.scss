@@ -101,14 +101,14 @@ li {
                     flex: 2;
                     color: $light-grayish-blue;
 
-                    &.complete {
+                    &.checked {
                         text-decoration: line-through;
                         color: $dark-grayish-blue;
                     }
                 }
 
 
-                .close-btn {
+                .delete-btn {
                     cursor: pointer;
                 }
             }
@@ -132,8 +132,8 @@ li {
                 cursor: pointer;
             }
 
-            .select-items::focus {
-                color: red;
+            .select-items:hover {
+                color: $bright-blue;
             };
 
             .select-items.active {
