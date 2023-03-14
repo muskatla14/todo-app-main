@@ -1,0 +1,30 @@
+@include media-md {
+    .form-container {
+        width: 80vw;
+    }
+
+    .one-color-bg__list {
+        width: 80vw;
+    }
+
+    .list-footer {
+        position: relative;
+    }
+
+    .select {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        // transform: translateX(50%);
+        background: $very-dark-desaturated-blue;
+        width: 100%;
+        padding: 15px 20px;
+        text-align: center;
+        justify-content: center;
+        border-radius: 5PX;
+    }
+
+    body.light .select {
+        background: $very-light-gray;
+    }
+}

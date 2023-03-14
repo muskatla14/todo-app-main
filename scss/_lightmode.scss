@@ -1,0 +1,43 @@
+
+body.light {
+    background-color: hsl(236, 33%, 92%);
+
+    .main__img-bg {
+                background-image: url(../images/bg-desktop-light.jpg);
+
+                .form__input {
+                    background-color: $very-light-gray;
+                    color: $very-dark-grayish-blue;
+                    font-weight: 700;
+
+                }
+            }
+
+        
+
+        .list-footer {
+            background-color: $very-light-gray;
+        }
+        
+        .one-color-bg {
+        background: $light-grayish-blue;
+
+        .todo-items {
+            background-color: $very-light-gray;
+            border-radius: 5px 5px 0 0;
+
+           &__item {
+            // display: none;
+            border-bottom: 1px solid $light-grayish-blue;
+
+            .p-todo {
+                color: $very-dark-grayish-blue;
+                font-weight: 700;
+                
+            }
+           }
+        }
+    }
+
+
+  }
